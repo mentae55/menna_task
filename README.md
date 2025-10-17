@@ -102,13 +102,13 @@ Guidelines for screenshots:
 
 Example Markdown to add under this section after adding images:
 
-![Home Screen](screenshots/screenshot1.png)
+![Home Screen](screenshots/1.png)
 *Figure 1 — Home screen showing main dashboard.*
 
-![Detail Screen](screenshots/screenshot2.png)
+![Detail Screen](screenshots/2.png)
 *Figure 2 — Detail screen with item information.*
 
-![Settings Screen](screenshots/screenshot3.png)
+![Settings Screen](screenshots/3.png)
 *Figure 3 — Settings screen and forms.*
 
 ## Contribution
