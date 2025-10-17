@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task/screens/home_screen.dart';
 import 'package:task/screens/main_screen.dart';
 
 void main() {

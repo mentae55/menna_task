@@ -4,7 +4,6 @@ import 'package:task/core/constants/app_color.dart';
 import 'package:task/core/constants/app_sizes.dart';
 import 'package:task/core/constants/app_style.dart';
 import 'package:task/screens/filter_screen.dart';
-import 'package:task/screens/main_screen.dart';
 import '../core/services/database_helper.dart';
 import '../core/widgets/custom_product_card.dart';
 import '../models/product.dart';

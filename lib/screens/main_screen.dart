@@ -27,7 +27,6 @@ class _MainScreenState extends State<MainScreen> {
         MaterialPageRoute(builder: (context) => const ProfileScreen()),
       );
     } else {
-      // ✅ باقي الصفحات تتبدل في نفس الـ Scaffold
       setState(() {
         currentIndex = index;
       });

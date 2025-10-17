@@ -36,9 +36,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: IconButton(
           onPressed: () => Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => MainScreen(),
-            ),
+            MaterialPageRoute(builder: (context) => MainScreen()),
           ),
           icon: Icon(
             Icons.arrow_back_ios,
@@ -64,8 +62,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 SizedBox(height: AppSizes.height10),
-
-                // الباقة الأساسية
                 _buildPackageCard(
                   packageName: 'أساسية',
                   height: AppSizes.height100,
@@ -75,7 +71,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 SizedBox(height: AppSizes.height10),
 
-                // باقة أكسترا
                 Stack(
                   clipBehavior: Clip.none,
                   children: [
@@ -87,12 +82,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           AppIcons.time,
                           "صلاحية الإعلان 30 يوم",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureRow(
                           AppIcons.plane,
                           "رفع لأعلى القائمة كل 3 أيام",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureWithSubtext(
                           AppIcons.pin,
                           "تثبيت في مقاول صحي",
@@ -116,30 +111,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           AppIcons.time,
                           "صلاحية الإعلان 30 يوم",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureRow(
                           AppIcons.plane,
                           "رفع لأعلى القائمة كل 3 أيام",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureWithSubtext(
                           AppIcons.pin,
                           "تثبيت في مقاول صحي",
                           "( خلال الـ48 ساعة القادمة )",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureRow(
                           AppIcons.earth,
                           "ظهور فى كل محافظات مصر",
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureRow(AppIcons.star, "أعلان مميز"),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureWithMultiline(AppIcons.pin, [
                           "تثبيت فى مقاول صحى فى",
                           "الجهراء",
                         ]),
-                        SizedBox(height: 8),
+                        SizedBox(height: AppSizes.height8),
                         _buildFeatureWithSubtext(
                           AppIcons.pin,
                           "تثبيت في مقاول صحي",
@@ -152,33 +147,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
                 SizedBox(height: AppSizes.height10),
-                // باقة سوبر
                 _buildPackageCard(
                   packageName: 'سوبر',
                   height: AppSizes.height340,
                   features: [
                     _buildFeatureRow(AppIcons.time, "صلاحية الإعلان 30 يوم"),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureRow(
                       AppIcons.plane,
                       "رفع لأعلى القائمة كل 3 أيام",
                     ),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureWithSubtext(
                       AppIcons.pin,
                       "تثبيت في مقاول صحي",
                       "( خلال الـ48 ساعة القادمة )",
                     ),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureRow(AppIcons.earth, "ظهور فى كل محافظات مصر"),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureRow(AppIcons.star, "أعلان مميز"),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureWithMultiline(AppIcons.pin, [
                       "تثبيت فى مقاول صحى فى",
                       "الجهراء",
                     ]),
-                    SizedBox(height: 8),
+                    SizedBox(height: AppSizes.height8),
                     _buildFeatureWithSubtext(
                       AppIcons.pin,
                       "تثبيت في مقاول صحي",
@@ -189,8 +183,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   multiplierTopPadding: AppSizes.height90,
                 ),
                 SizedBox(height: AppSizes.height30),
-
-                // باقات مخصصة
                 Container(
                   width: AppSizes.width328,
                   height: AppSizes.height80,
@@ -223,10 +215,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-
                 SizedBox(height: AppSizes.height200),
-
-                // زر التالي
                 Center(
                   child: ElevatedButton(
                     onPressed: () {},
@@ -386,8 +375,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _buildFeatureRow(String iconPath, String text) {
     return Row(
       children: [
-        SvgPicture.asset(iconPath, width: 24, height: 24),
-        SizedBox(width: 8),
+        SvgPicture.asset(
+          iconPath,
+          width: AppSizes.width24,
+          height: AppSizes.height24,
+        ),
+        SizedBox(height: AppSizes.height8),
         Text(
           text,
           style: AppStyles.text14.copyWith(fontWeight: FontWeight.w600),
@@ -404,8 +397,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SvgPicture.asset(iconPath, width: 24, height: 24),
-        SizedBox(width: 8),
+        SvgPicture.asset(
+          iconPath,
+          width: AppSizes.width24,
+          height: AppSizes.height24,
+        ),
+        SizedBox(height: AppSizes.width8),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -430,7 +427,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Row(
       children: [
         SvgPicture.asset(iconPath),
-        SizedBox(width: 10),
+        SizedBox(height: AppSizes.width10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: lines

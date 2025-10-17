@@ -30,9 +30,15 @@ class _FilterScreenState extends State<FilterScreen> {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: IconButton( onPressed: () {
-                  Navigator.pop(context);
-                }, icon: Icon(Icons.close_rounded, color: AppColors().blackColor),),
+                icon: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.close_rounded,
+                    color: AppColors().blackColor,
+                  ),
+                ),
               ),
               Text("فلترة", style: AppStyles.text24),
               const Spacer(),
@@ -116,7 +122,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
+                  size: AppSizes.radius60,
                   color: AppColors().blackColor,
                 ),
                 leading: Icon(
@@ -144,7 +150,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       borderRadius: BorderRadius.circular(AppSizes.radius8),
                       border: Border.all(
                         color: AppColors().graye6Color,
-                        width: 1,
+                        width: AppSizes.width1,
                       ),
                     ),
                   ),
@@ -155,7 +161,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       borderRadius: BorderRadius.circular(AppSizes.radius8),
                       border: Border.all(
                         color: AppColors().graye6Color,
-                        width: 1,
+                        width: AppSizes.width1,
                       ),
                     ),
                   ),
@@ -216,7 +222,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       borderRadius: BorderRadius.circular(AppSizes.radius8),
                       border: Border.all(
                         color: AppColors().graye6Color,
-                        width: 1,
+                        width: AppSizes.width1,
                       ),
                     ),
                     child: Padding(
@@ -236,7 +242,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       borderRadius: BorderRadius.circular(AppSizes.radius8),
                       border: Border.all(
                         color: AppColors().graye6Color,
-                        width: 1,
+                        width: AppSizes.width1,
                       ),
                     ),
                     child: Padding(
@@ -349,7 +355,7 @@ class _FilterScreenState extends State<FilterScreen> {
           borderRadius: BorderRadius.circular(AppSizes.radius30),
           border: Border.all(
             color: isSelected ? AppColors().blueColor : AppColors().graye6Color,
-            width: isSelected ? 2 : 1,
+            width: isSelected ? AppSizes.width2 : AppSizes.width1,
           ),
         ),
         child: Text(
